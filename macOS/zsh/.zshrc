@@ -155,3 +155,6 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # fnm
 eval "$(fnm env --use-on-cd --shell zsh)"
+
+# postgresql
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"

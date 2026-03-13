@@ -1,0 +1,28 @@
+{
+  "effortLevel": "medium",
+  "attribution": {
+    "commit": "Generated with AI\n\nCo-authored-by: Claude <claude@anthropic.com>",
+    "pr": ""
+  },
+  "permissions": {
+    "allow": [
+      "Bash(git status)",
+      "Bash(git diff *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git log *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(grep *)"
+    ],
+    "deny": [
+      "Read(.env*)"
+    ],
+    "ask": [
+      "Bash(sudo *)",
+      "Bash(rm *)",
+      "Bash(git clean *)",
+      "Bash(git branch -D *)"
+    ]
+  }
+}
