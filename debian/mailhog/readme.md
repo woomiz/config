@@ -1,55 +1,49 @@
-# Mailhog
+# Mailpit
 
-Mailhog is a email testing tool that mimics SMTP server for local use.
+Mailpit is an email testing tool that mimics an SMTP server for local use. It replaces Mailhog with a modern UI and active development.
 
-## Installing Mailhog
+## Installing Mailpit
 
-1. Find the git repository here - [https://github.com/mailhog/MailHog](https://github.com/mailhog/MailHog). Download the latest version for your operating system. This documentation is for `Ubuntu 22.04 LTS`.
-
-   You can either run the executable file doing `./MailHog_linux_amd64` to use it immediately or turn it into a `systemd` service for better management later on.
-
-1. Move it to `/usr/local/bin` and rename it as `mailhog`
+1. Download and install Mailpit using the official install script
 
    ```sh
-   sudo mv MailHog_linux_amd64 /usr/local/bin/mailhog
+   sudo bash < <(curl -sL https://raw.githubusercontent.com/axllent/mailpit/develop/install.sh)
    ```
 
-1. Make it executable
-
-   ```sh
-   sudo chmod +x /usr/local/bin/mailhog
-   ```
+   This installs the binary to `/usr/local/bin/mailpit`.
 
 1. Create a new service for `systemd`
 
    ```sh
-   sudo vim /etc/systemd/system/mailhog.service
+   sudo vim /etc/systemd/system/mailpit.service
    ```
 
-1. Paste the following in `mailhog.service`
+1. Paste the following in `mailpit.service`
 
    ```
    [Unit]
-   Description=MailHog Service
+   Description=Mailpit Service
    After=network.target
 
    [Service]
-   ExecStart=/usr/local/bin/mailhog
+   ExecStart=/usr/local/bin/mailpit
    Restart=always
    User=root
    Group=root
    Environment=PATH=/usr/local/bin:/usr/bin:/bin
-   Environment=MAILHOG_SMTPLISTEN=127.0.0.1:1025
-   Environment=MAILHOG_API_BINDADDR=127.0.0.1:8025
+   Environment=MP_SMTP_BIND_ADDR=127.0.0.1:1025
+   Environment=MP_UI_BIND_ADDR=127.0.0.1:8025
 
    [Install]
    WantedBy=multi-user.target
    ```
 
-1. Restart `systemd`
+1. Reload `systemd` and enable the service
 
    ```sh
-   sudo systemctl daemon-reload
+   sudo systemctl daemon-reload &&
+   sudo systemctl enable mailpit &&
+   sudo systemctl start mailpit
    ```
 
-1. Use `systemctl` start / stop / status of `mailhog`. The service must be visible in localhost at port `8025` and the SMTP server at port `1025`
+1. Use `systemctl` to start / stop / check status of `mailpit`. The web UI is available at `http://localhost:8025` and the SMTP server listens on port `1025`.

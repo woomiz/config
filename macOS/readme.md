@@ -62,6 +62,10 @@
 
    Go to official [website](https://keepassxc.org/download/#macos) and download the latest version for macOS and install it.
 
+1. ## **mailpit**
+
+   Follow the directory for install instructions.
+
 1. ## **wakatime**
 
    ```sh

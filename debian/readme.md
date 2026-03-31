@@ -235,7 +235,7 @@ This is my attempt to configure ubuntu for my future needs. This project will in
    ```
    Look for more instruction in [official website](https://calibre-ebook.com/download)
 
-1. ## **mailhog**
+1. ## **mailpit**
 
    Follow the directory for install instructions
 
