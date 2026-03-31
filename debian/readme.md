@@ -61,7 +61,6 @@ This is my attempt to configure ubuntu for my future needs. This project will in
    Follow the directory for install instructions
 
 1. ## **Create a passwordless guest user**
-
    1. Create a user named `guest` with a temporary password
       ```sh
        sudo adduser guest
@@ -80,6 +79,7 @@ This is my attempt to configure ubuntu for my future needs. This project will in
    sudo add-apt-repository universe &&
    sudo apt install libfuse2t64
    ```
+
 1. ## **fnm**
 
    ```sh
@@ -90,6 +90,7 @@ This is my attempt to configure ubuntu for my future needs. This project will in
 1. ## **bun**
 
    For more info, look at the [official website](https://bun.sh/docs/installation)
+
    ```sh
    curl -fsSL https://bun.sh/install | bash
    ```
@@ -131,7 +132,6 @@ This is my attempt to configure ubuntu for my future needs. This project will in
    ```
 
 1. ## **local wordpress**
-
    - #### Install local
      Download local from [here](https://cdn.localwp.com/stable/latest/deb), if this doesn't work then go to their [official website](https://localwp.com/) to download
    - #### Access the site on dbeaver
@@ -160,7 +160,6 @@ This is my attempt to configure ubuntu for my future needs. This project will in
    If you want the latest version then download the AppImage form the [official website](https://www.fosshub.com/qBittorrent.html) and have it placed under `/usr/local/bin`
 
 1. ## **VSCode**
-
    - Download `spacemono NF` font to support editor font inside vscode from [here](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/SpaceMono.zip) or go to the [fonts website](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/SpaceMono.zip). Install it using the `font-manager`.
    - Download the `.deb` by clicking [here](https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64), if that doesn't work then download it from the [official website](https://code.visualstudio.com/Download#)
 
@@ -230,14 +229,16 @@ This is my attempt to configure ubuntu for my future needs. This project will in
 1. ## **calibre**
 
    For install and update run this script
+
    ```sh
    sudo -v && wget -nv -O- https://download.calibre-ebook.com/linux-installer.sh | sudo sh /dev/stdin
    ```
+
    Look for more instruction in [official website](https://calibre-ebook.com/download)
 
-1. ## **mailpit**
+1. ## **mailpit - Local SMTP**
 
-   Follow the directory for install instructions
+   Follow the [directory](./mailpit/readme.md) for install instructions
 
 1. ## **wakatime**
 
