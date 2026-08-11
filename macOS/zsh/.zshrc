@@ -158,3 +158,6 @@ eval "$(fnm env --use-on-cd --shell zsh)"
 
 # postgresql
 export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH"
+
+# For python uv package manager
+source "$HOME/.local/bin/env"

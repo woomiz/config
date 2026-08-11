@@ -12,7 +12,7 @@ return {
 		-- Example lualine setup
 		require("lualine").setup({
 			options = {
-				theme = "catppuccin",
+				theme = "catppuccin-nvim",
 				globalstatus = true,
 			},
 
